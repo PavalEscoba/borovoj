@@ -1,0 +1,77 @@
+
+@mixin clear{
+	&::before, &::after{
+		display: table;
+		content: '';
+	}
+	&:after{
+		clear: both;
+	}
+}
+
+
+@mixin inline($valign: top){
+	display: inline-block;
+	vertical-align: $valign;
+}
+
+
+@mixin links ($link, $visited, $hover, $active) {
+    & {
+        color: $link;
+        &:visited {
+            color: $visited;
+        }
+        &:hover {
+            color: $hover;
+        }
+        &:active, &:focus {
+            color: $active;
+        }
+    }
+}
+ 
+@function rem($px){
+	@return $px/16px + 0rem;
+}
+
+@mixin desktop{
+	@media screen and (min-width: 1280px) {
+		@content;
+	}
+}
+@mixin laptop{
+	@media screen and  (min-width: 1024px) and (max-width: 1279px){
+		@content;
+	}
+}
+@mixin tablet{
+	@media screen and (min-width: 768px) and (max-width: 1023px){
+		@content;
+	}
+}
+@mixin mobile{
+	@media screen and (max-width:767px){
+		@content;
+	}
+}
+
+@mixin container{
+
+	@media screen and (max-width: 767px) {
+		width: 100%;
+		margin: 0 auto;	
+	}
+	@media screen and (min-width: 768px) and (max-width: 1023px){
+		width: 768px;
+		margin: 0 auto;
+	}
+	@media screen and (min-width: 1024px) and (max-width: 1279px){
+		width: 1024px;
+		margin: 0 auto;
+	}
+	@media screen and (min-width: 1280px){
+		width: 1170px;
+		margin: 0 auto;
+	}
+}

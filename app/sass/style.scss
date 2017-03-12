@@ -1,0 +1,16 @@
+//adjustment
+@import "_misc/normalize";
+@import "_misc/mixins";
+@import "_misc/variables";
+@import "_misc/fonts";
+@import "_misc/adjustment";
+
+//layout
+
+@import "blocks/page-header";
+@import "blocks/main-nav";
+@import "blocks/slider";
+@import "blocks/products";
+@import "blocks/page-footer";
+
+@import "libs/jquery.bxslider"

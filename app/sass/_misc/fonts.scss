@@ -1,0 +1,42 @@
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Light.woff2') format('woff2'),
+        url('../fonts/Roboto-Light.woff') format('woff'),
+        url('../fonts/Roboto-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Vida 31 Pro';
+    src: url('../fonts/Vida-31-Pro.woff2') format('woff2'),
+        url('../fonts/Vida-31-Pro.woff') format('woff'),
+        url('../fonts/Vida-31-Pro.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Vida 33 Pro';
+    src: url('../fonts/Vida-33-Pro.woff2') format('woff2'),
+        url('../fonts/Vida-33-Pro.woff') format('woff'),
+        url('../fonts/Vida-33-Pro.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+@mixin font($style){
+    @if $style==roboto{
+        font-family: 'Roboto', Arial, sans-serif;
+    }
+  
+    @else if $style==pro33{
+        font-family: 'Vida 33 Pro', Arial, sans-serif;
+    } 
+    @else if $style==pro31{
+        font-family: 'Vida 31 Pro', Arial, sans-serif;
+    }
+}

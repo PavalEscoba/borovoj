@@ -1,0 +1,62 @@
+.slider{
+	width: auto;
+	margin-bottom: 40px;
+}
+.slider__item{
+	height: auto;
+	width: auto;	
+	max-width: 1920px;
+	margin: 0 auto;
+	background-image: url("../img/slider/slider.jpg");
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.slider__desc{
+	display: inline-block;
+	width: 40%;
+	padding-top:13%;
+	padding-bottom: 14%;
+	margin-left: 10%;
+}
+.slider__title{
+  font-size: 48px;
+  @include font(pro33);
+  line-height: 1.875;
+}
+
+.slider__btn{
+	display: inline-block;
+	color: #fff;
+	padding-left: 30px;
+	padding-right: 34px;
+	padding-top: 10px;
+	padding-bottom: 11px;
+	background-color: $font-color;
+	border-radius: 2px;
+	&:hover{
+		background-color: $hover-color;
+	}
+}
+
+//BX-SLIDER
+.slider .bx-wrapper .bx-viewport{
+	border: none;
+	box-shadow: none;
+}
+.slider .bx-wrapper .bx-pager.bx-default-pager a:hover{
+	background-color: $hover-color;
+}
+
+.slider  .bx-wrapper .bx-pager.bx-default-pager a.active{
+	background-color: $hover-color;
+}
+.slider .bx-wrapper .bx-pager.bx-default-pager a{
+	background-color: #c9e0c2;
+}
+.slider .bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto{
+	bottom: 20px;
+}
+.slider .bx-wrapper{
+	margin-bottom: 0;
+}

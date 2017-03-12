@@ -1,0 +1,56 @@
+.page-header{
+	margin: 0 auto;
+	width: 100%;
+	position: relative;
+	
+	
+}
+
+.page-header__top{
+	@include clear;
+	@include container;
+	padding-bottom: 20px;
+}
+.page-header__logo{
+	float: left;
+	margin-top: 30px;
+}
+.logo{
+	@include inline(top);	
+}
+.logo__pic{
+	display: block;
+	max-width: 235px;
+	max-height: 55px;
+}
+.page-header__tm{
+	@include inline(top);
+	margin-top: -5px;
+	font-size: 12px;
+
+}
+
+.page-header__contact{
+	float: right;
+	margin-top: 20px;
+	text-align: right;
+}
+.page-header__cabinet{
+	padding-left: 30px;
+	background: transparent url('../img/icons/cabinet.png') left center no-repeat;
+}
+.page-header__email a{
+	font-size: 12px;
+	border-bottom: 1px dotted $font-color;
+}
+.page-header__phone a{
+	font-weight: bold;
+}
+.page-header__border{
+	width: 100%;
+	height: 1px;
+	background-color: rgba($font-color, .3);
+}
+.page-header__bottom{
+	@include container;
+}
