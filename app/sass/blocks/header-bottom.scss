@@ -1,17 +1,43 @@
+.page-header__bottom{
+	@include container;
+	@include mobile{
+		margin-bottom: 50px;
+	}
+}
+
 //MAIN-NAV
+
 .main-nav{
 	position: relative;
 	display: inline-block;
+	width: 82%;
+	@include mobile{
+		width: 100%;
+	}
+}
+.main-nav__wrapper--closed{
+	display: block;
+	@include mobile{
+		display: none;
+	}
 }
 
 .main-nav__list{
 	font-size: 0;
-	width: 940px;
+	width: 100%;
+	@include mobile{
+		width: auto;
+		display: block;
+		padding-top: 60px;
+		z-index: 20;
+		background-color: #fff;
+	}
 }
 .main-nav__item{
 	@include inline(middle);
 	position: relative;
 	max-width: 180px;
+
 	&:hover {
 		background-color: $hover-color;
 		box-shadow: -1px 0 0 0 $hover-color;
@@ -21,6 +47,16 @@
 	}
 	&:hover .nav-submenu{
 		display: block;
+	}
+	@include mobile{
+		max-width: none;
+		width: 100%;
+		display: block;
+		border-bottom: 1px solid #eee;
+
+		&:hover .nav-submenu{
+			display: block;
+		}
 	}
 }
 .main-nav__link{
@@ -44,6 +80,23 @@
 		top: 50%;
 		right: 0;
 		transform: translateY(-50%);
+	}
+	@include laptop{
+		padding-right: 15px;
+		padding-left:15px;
+	}
+	@include tablet{
+		font-size: 13px;
+		padding-right: 5px;
+		padding-left:5px;
+
+	}
+	@include mobile{
+		width: 100%;
+		text-align: center;
+		&:after{
+			display: none;
+		}
 	}	
 }
 .main-nav__item:last-child .main-nav__link:after{
@@ -54,7 +107,60 @@
 }
 .main-nav__item:first-child .main-nav__link{
 	padding-left: 0;
+	@include mobile{
+		padding-left: 25px;
+	}
 }
+
+
+//SUB-MENU
+.nav-submenu{
+	display: none;
+	position: absolute;
+	z-index: 20;
+	min-width: 240px;
+	border-top: 1px solid $hover-color;
+	@include tablet{
+		min-width: 180px;
+	}
+	@include mobile{
+		position: static; 
+		width: 100%;
+		text-align: center;
+		background-color: $font-color;
+	}
+}
+.nav-submenu__item{
+	background-color:#fff;
+	&:hover{
+		background-color: #f7f7f7;
+	}
+	@include mobile {
+		background-color: $font-color;
+		&:hover .nav-submenu__link{
+			color: $font-color;
+		}
+	}
+}
+.nav-submenu__link{
+	@include font(roboto);
+	display: block;
+	font-size: 15px;
+	padding-top: 17px;
+	padding-bottom: 15px;
+	padding-left: 25px;
+	@include tablet{
+		font-size: 12px;
+		padding-top: 12px;
+		padding-bottom: 12px;
+		padding-left: 10px;
+		}
+	@include mobile{
+		color: #fff;	
+	}	
+	
+}
+
 
 //TOGGLE
 .main-nav__toggle{
@@ -65,13 +171,18 @@
 	z-index: 2;
 	display: none;
 	position: absolute;
-	top: 0;
-	right: 0;
+	top: 5px;
+	right: 5px;
 	box-shadow: 0px 0px 7px 0 $hover-color;
-	border-radius: 50%;
+	
+	@include mobile{
+		display: block;
+		right: 15px;
+	}
+	
 }
 .main-nav__toggle--closed::before{
-	display: none;
+	display: block;
 	content: "";
 	position: absolute;
 	top: 15px;
@@ -97,52 +208,53 @@
 .main-nav__toggle--opened::after{
 	transform: rotate(-45deg);
 }
+
+
 //SEARCH
 .page-header__search{
-	width: 200px;
+	width: 17%;
 	display: inline-block;
+	position: relative;
+	@include laptop{
+		width: 15%;
+	}
+	@include mobile{
+		display: block;
+		width: 50%;
+		margin: 0 auto;	
+		margin-top: 20px;
+	}
 }
 .search__input{
-	width: 170px;
+	width: 100%;
 	@include inline(middle);
 	border: none;
 	outline: none;
 	&:focus{
 		border-bottom: 1px solid $hover-color;
 	}
+
+	@include mobile{
+		width:100%;
+		margin: 0 auto;
+		border-bottom: 1px solid $hover-color;
+	}
 }
 .search__submit{
 	@include inline(middle);
 	background-color: transparent;
-
 	background-image: url("../img/icons/search.png");
-	background-position: 0	0;
+	background-position: center	center;
 	background-repeat: no-repeat;
 	width: 20px;
 	height: 20px;
 	border: none;
 	outline: none;
 	cursor: pointer;
-}
-//SUB-MENU
-.nav-submenu{
-	display: none;
 	position: absolute;
-	z-index: 20;
-	min-width: 240px;
-	border-top: 1px solid $hover-color;
-}
-.nav-submenu__item{
-	background-color: #fff;
-	&:hover{
-		background-color: #f7f7f7;
-	}
-}
-.nav-submenu__link{
-	@include font(roboto);
-	display: block;
-	font-size: 15px;
-	padding-top: 17px;
-	padding-bottom: 15px;
-	padding-left: 25px;	
+	top: 50%;
+	margin-top: -10px;
+	right: 0px;
+	
+	
 }

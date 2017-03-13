@@ -26,7 +26,7 @@
 						</span>
 					</div>					
 					<div class="page-header__contact">
-						<div class="page-header__cabinet">Кабинет косметолога</div>
+						<span class="page-header__cabinet">Кабинет косметолога</span>
 						<div class="page-header__phone">
 							<a href="tel:+78123130090">
 								+7 (812) 313-00-90
@@ -57,7 +57,7 @@
 									</a>
 								</li>
 								<li class="main-nav__item">
-									<a href="#" class="main-nav__link">
+									<a href="#" class="main-nav__link main-nav__link--product" onclick="event.preventDefault()">
 										наша продукция
 									</a>
 									<ul class="nav-submenu">
@@ -150,10 +150,12 @@
 			<section class="products">
 				<div class="products__wrapper">
 					<ul class="products__list">
+
 						<li class="products__item">
+
 							<div class="products__desc">
 								<h3 class="products__title">
-									 Профессиональная серия косметической продукции от лучшего производителя в европе
+									 Профессиональная серия 
 								</h3>
 								<p>
 									Только для использования профессиональными косметологами после получения сертификата в нашем учебном-центре. 
@@ -161,7 +163,9 @@
 								<a href="#" class="products__link">Перейти в каталог</a>
 							</div>
 							<div class="products__photo">
-								<img src="img/content/cream-1.png" alt="Professional Series">
+								<div class="products__photo-inner">
+									<img src="img/content/cream-1.png" alt="Professional Series">
+								</div>
 							</div>
 							
 						</li>
@@ -178,9 +182,45 @@
 								</a>
 							</div>
 							<div class="products__photo">
-								<img src="img/content/cream-2.png" alt="Professional Series">
+								<div class="products__photo-inner">
+									<img src="img/content/cream-2.png" alt="Professional Series">
+								</div>
+							</div>							
+						</li>
+						<li class="products__item">
+							<div class="products__desc">
+								<h3 class="products__title">
+									 Профессиональная серия
+								</h3>
+								<p>
+									Только для использования профессиональными косметологами после получения сертификата в нашем учебном-центре. 
+								</p>
+								<a href="#" class="products__link">Перейти в каталог</a>
+							</div>
+							<div class="products__photo">
+								<div class="products__photo-inner">
+									<img src="img/content/cream-1.png" alt="Professional Series">
+								</div>
 							</div>
 							
+						</li>
+						<li class="products__item">
+							<div class="products__desc">
+								<h3 class="products__title">
+									Домашняя серия
+								</h3>
+								<p>
+									Те же препараты, но в меньшей концентрации. Для использования дома в перерывах между салонными процедурами.	
+								</p>
+								<a href="#" class="products__link">
+									Перейти в каталог
+								</a>
+							</div>
+							<div class="products__photo">
+								<div class="products__photo-inner">
+									<img src="img/content/cream-2.png" alt="Professional Series">
+								</div>
+							</div>							
 						</li>
 					</ul>
 				</div>
@@ -189,7 +229,7 @@
 	</div> <!-- end of wrapper -->	
 	
 	<footer class="page-footer">
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet est, culpa quibusdam, accusantium aliquid, odit cum quasi nulla mollitia, inventore ab ea similique eveniet? Officia quod odit cumque dolor iusto alias voluptates. Sequi, quam, ipsa? Et doloremque possimus id velit accusamus. Optio ratione non, corporis ad itaque temporibus amet voluptas.
+
 	</footer>
 	<script src="scripts/main.js"></script>
 </body>
