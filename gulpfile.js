@@ -18,8 +18,8 @@ gulp.task('sass', function(){
 	return gulp.src('app/sass/style.scss') 
 	.pipe(sass()) 
 	.pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
-	/*.pipe(cssnano())
-	.pipe(rename({suffix:'.min'})) */
+	.pipe(cssnano())
+	.pipe(rename({suffix:'.min'})) 
 	.pipe(gulp.dest('app/css')) 
 	.pipe(browserSync.reload({stream: true})) 
 });
@@ -75,14 +75,13 @@ gulp.task('build', ['clean', 'img', 'sass', 'scripts'], function() {
 	var buildFonts = gulp.src('app/fonts/**/*') 
 	.pipe(gulp.dest('dist/fonts'))
 
-	var buildJs = gulp.src('app/js/**/*') 
-	.pipe(gulp.dest('dist/js'))
+	var buildJs = gulp.src('app/scripts/**/*') 
+	.pipe(gulp.dest('dist/scripts'))
 
 	var buildHtml = gulp.src('app/*.html') 
 	.pipe(gulp.dest('dist'));
 
-	var files = gulp.src(['app/resumes/Resume-Miatlitski-Web-developer.pdf', 'app/resumes/Resume-Miatlitski-Web-developer.docx'])
-	.pipe(gulp.dest('dist/resumes'));
+
 
 });
 
